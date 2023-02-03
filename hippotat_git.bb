@@ -30,22 +30,4 @@ SRCREV = "a6ac94b4922602af64f22b86ba5347ad95fcda44"
 
 S = "${WORKDIR}/git"
 
-# NOTE: this is a Makefile-only piece of software, so we cannot generate much of the
-# recipe automatically - you will need to examine the Makefile yourself and ensure
-# that the appropriate arguments are passed in.
-
-do_configure () {
-	# Specify any needed configure commands here
-	:
-}
-
-do_compile () {
-	# You will almost certainly need to add additional arguments here
-	oe_runmake
-}
-
-do_install () {
-	# This is a guess; additional arguments may be required
-	oe_runmake install 'DESTDIR=${D}'
-}
-
+inherit cargo cargo-update-recipe-crates
