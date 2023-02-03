@@ -22,6 +22,8 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=aa34b57d74c32e9e92f9aa7609665690 \
                     file://debian/copyright;md5=aa34b57d74c32e9e92f9aa7609665690 \
                     file://uml/rndaddtoentcnt/LICENSE;md5=e048e7a053ab211791bc99c98e723ab7"
 
+DEPENDS += "openssl"
+
 SRC_URI = "git://salsa.debian.org/iwj/hippotat.git;protocol=https;branch=main"
 
 # Modify these as desired
@@ -30,6 +32,6 @@ SRCREV = "a6ac94b4922602af64f22b86ba5347ad95fcda44"
 
 S = "${WORKDIR}/git"
 
-inherit cargo cargo-update-recipe-crates
+inherit cargo cargo-update-recipe-crates pkgconfig
 
 require hippotat-crates.inc
