@@ -31,3 +31,5 @@ SRCREV = "a6ac94b4922602af64f22b86ba5347ad95fcda44"
 S = "${WORKDIR}/git"
 
 inherit cargo cargo-update-recipe-crates
+
+require hippotat-crates.inc
